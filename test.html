@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Os Pequenos Discípulos</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 50px; 
+            background: linear-gradient(135deg, #48CC6C, #4F9CF9);
+            color: white;
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            background: white; 
+            color: #333;
+            padding: 30px; 
+            border-radius: 20px; 
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2); 
+        }
+        h1 { color: #48CC6C; margin-bottom: 20px; }
+        .status { background: #e8f5e8; padding: 15px; border-radius: 10px; margin: 20px 0; }
+        .error { background: #ffe8e8; color: #d63384; }
+        .success { background: #e8f5e8; color: #198754; }
+        img { max-width: 200px; margin: 20px 0; border-radius: 15px; }
+        .btn { 
+            background: #48CC6C; 
+            color: white; 
+            padding: 15px 30px; 
+            border: none; 
+            border-radius: 10px; 
+            font-size: 18px; 
+            cursor: pointer; 
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Os Pequenos Discípulos 🎨</h1>
+        
+        <img src="./os-pequenos-discipulos.png" alt="Os Pequenos Discípulos" />
+        
+        <div class="status success">
+            <h2>✅ Teste de Funcionamento</h2>
+            <p><strong>HTML:</strong> Carregando ✓</p>
+            <p><strong>CSS:</strong> Aplicado ✓</p>
+            <p><strong>Imagens:</strong> <span id="img-status">Testando...</span></p>
+            <p><strong>JavaScript:</strong> <span id="js-status">Testando...</span></p>
+        </div>
+
+        <h3>📚 35 Livros de Colorir Cristãos</h3>
+        <p>Transforme momentos especiais com sua família, célula e escola dominical</p>
+        
+        <div style="margin: 30px 0;">
+            <a href="./index.html" class="btn">🚀 VER APLICAÇÃO COMPLETA</a>
+            <br><br>
+            <a href="https://pay.kirvano.com/756740b8-a70d-4ac1-8167-49ec45924b55" class="btn" target="_blank">💰 PACOTE BÁSICO - R$ 10,00</a>
+            <br><br>
+            <a href="https://pay.kirvano.com/85fa9217-5116-46d9-b5e9-724b2d22fd91" class="btn" target="_blank">👑 PACOTE PREMIUM - R$ 17,90</a>
+        </div>
+
+        <div class="status">
+            <h3>🔧 Diagnóstico</h3>
+            <p>Se você consegue ver esta página, significa que:</p>
+            <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
+                <li>✅ GitHub Pages está funcionando</li>
+                <li>✅ Arquivos estão no lugar correto</li>
+                <li>✅ HTML e CSS carregam normalmente</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('js-status').innerHTML = '✅ Funcionando';
+        
+        // Verificar se imagem carrega
+        const img = document.querySelector('img');
+        img.onload = function() {
+            document.getElementById('img-status').innerHTML = '✅ Carregando';
+        };
+        img.onerror = function() {
+            document.getElementById('img-status').innerHTML = '❌ Erro ao carregar';
+        };
+        
+        // Testar se CSS da aplicação existe
+        fetch('./assets/index-BIbo-3Oe.css')
+            .then(response => {
+                if (response.ok) {
+                    console.log('✅ CSS da aplicação encontrado');
+                } else {
+                    console.log('❌ CSS da aplicação não encontrado');
+                }
+            })
+            .catch(error => console.log('❌ Erro ao verificar CSS:', error));
+            
+        // Testar se JS da aplicação existe
+        fetch('./assets/index-D99d6bqx.js')
+            .then(response => {
+                if (response.ok) {
+                    console.log('✅ JS da aplicação encontrado');
+                } else {
+                    console.log('❌ JS da aplicação não encontrado');
+                }
+            })
+            .catch(error => console.log('❌ Erro ao verificar JS:', error));
+    </script>
+</body>
+</html>
